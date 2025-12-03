@@ -1,0 +1,87 @@
+🏦 Online Banking System (C Programming)
+This project is a simple but fully functional Online Banking System built in C programming language.
+It demonstrates core programming concepts including conditional statements, loops, functions, file handling, and a custom simple database system for persistent data storage.
+📌 Features Implemented
+1. User Registration
+Creates a new account with:
+Full name
+Account number
+Password
+Initial deposit
+Saved permanently in bank_database.db.
+2. User Login
+Authenticates using:
+Account number
+Password
+Loads user profile from the database.
+ 3. Deposit Money
+Adds funds to user balance
+Updates database
+Logs the transaction into transactions.db
+4. Withdraw Money
+Checks sufficient balance
+Deducts amount from account
+Updates database
+Logs the withdrawal
+ 5. View Account Details
+Displays:
+Account holder name
+Account number
+Current balance
+Password is never displayed.
+ 6. Transaction History
+Shows all past transactions linked to the logged-in account
+Stored in transactions.db, readable format:
+ACC:12345 | Deposit | 200.00
+ACC:12345 | Withdraw | 50.00
+7. Simple Database System
+Your project uses two database files:
+bank_database.db
+Stores account records in binary format
+Supports:
+INSERT
+UPDATE
+SELECT
+ transactions.db
+Stores each transaction in plain text
+Easy for instructors to review
+]Together, these act as a lightweight database system for the banking application.
+Project Structure
+online_banking_database.c    → Main program
+bank_database.db             → Database of user accounts
+transactions.db              → Transaction history log
+README.md                    → Documentation
+How to Compile and Run
+Using GCC (Recommended)
+gcc online_banking_database.c -o banking
+./banking
+Using CodeBlocks
+1. Create a new C console project
+2. Replace the main .c file with online_banking_database.c
+3. Press Build & Run
+Requirements
+C Compiler (GCC, MinGW, or CodeBlocks)
+No external libraries required
+Works on Windows, Linux, and Mac
+ Extra Features Added (Bonus Marks)
+Transaction history
+Simple database implementation
+Persistent storage
+File-based account updates
+Clean menu navigation
+ Assumptions
+Each account number is unique
+No concurrent access to the database
+Passwords stored in plain text (can be upgraded to hashing if needed)
+⚠️ Limitations
+No encryption on stored data
+No admin panel (can be added on request)
+No protection against malformed database files
+Possible Future Improvements
+I can help you add:
+ Password hashing (SHA-256)
+ Fund transfer between accounts
+ Admin dashboard
+Export reports
+ Colored UI with animations
+ Author
